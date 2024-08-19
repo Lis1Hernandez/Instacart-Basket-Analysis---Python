@@ -1,0 +1,260 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "b0bb054f-7a57-4c9d-ad57-d425e0d598b5",
+   "metadata": {},
+   "source": [
+    "'#01. Importing Libraries'"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 59,
+   "id": "2a33ac20-0668-4874-b068-36db6cc73fa4",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Import Libraries\n",
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "import os\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "28641c1b-b771-4b96-a6a0-2c285218c9ec",
+   "metadata": {},
+   "source": [
+    "'# 02. Data Types'"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 61,
+   "id": "3288625d-9932-4189-80e9-70fb598629bf",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#code 3 different ways of reaching a result of 100 by adding or subtracting numeric values\n",
+    "x=150\n",
+    "y=50"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 62,
+   "id": "68ff229d-d81c-4b3e-93dd-4a07e391bb45",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "100"
+      ]
+     },
+     "execution_count": 62,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "x-y"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 63,
+   "id": "3dc46593-6063-4fdf-b2fa-b7d89a97d30e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#code 3 different ways of reaching a result of 100 by adding or subtracting numeric values\n",
+    "a=20\n",
+    "b=80"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 64,
+   "id": "a364518c-65f2-45b9-a1b2-2b0204b81cc2",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "100"
+      ]
+     },
+     "execution_count": 64,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a+b"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 65,
+   "id": "bb71d51c-584e-4ea0-8df8-c36779c3dbf3",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#code 3 different ways of reaching a result of 100 by adding or subtracting numeric values\n",
+    "c=1000\n",
+    "d=900"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 66,
+   "id": "1e95fe7e-f40c-430f-bd6a-a2ccefc39492",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "100"
+      ]
+     },
+     "execution_count": 66,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "c-d"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 67,
+   "id": "2b02f9fb-068d-4303-8ffd-ef96c7a86d7f",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#code 2 floating-point variables and divide them by each other\n",
+    "e=80.95\n",
+    "f=40.68"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 68,
+   "id": "f510d9d1-2ef3-43d6-b6ac-e92042aeb0f5",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1.9899213372664701"
+      ]
+     },
+     "execution_count": 68,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "e/f"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 108,
+   "id": "7ddcf82e-2fa6-4b92-9be8-6fa0d099b595",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#construct a short word made of seperate strings\n",
+    "h='Jup'\n",
+    "i='yter'"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 110,
+   "id": "4d777718-67f3-4b7b-92a6-1cd8baa91710",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'Jupyter'"
+      ]
+     },
+     "execution_count": 110,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "h+i"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 116,
+   "id": "d1305296-642a-43da-a610-a8e0c686c966",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#construct 2 short sentences made of separate strings\n",
+    "j='Jupyter is a versatile free tool for beginners entering the world of data science and programming.'\n",
+    "k='It supports over 40 programming languages and combines code,equations,visualizations and text.'"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 118,
+   "id": "0f849583-b634-4c0e-805c-0644fdce79ec",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'Jupyter is a versatile free tool for beginners entering the world of data science and programming.It supports over 40 programming languages and combines code,equations,visualizations and text.'"
+      ]
+     },
+     "execution_count": 118,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "j+k"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "e2367bdd-4e24-4cad-b988-f1895e8b3c68",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.4"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
